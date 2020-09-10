@@ -18,7 +18,7 @@ let $ = createSnippetWithJQuery(`
 `);
 
 const changeAllClassNames = () => {
-  // Solution code here...
+  $('li').addClass('fruit');
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -28,7 +28,13 @@ Write a function named sortBackwards that takes in an array of numbers and retur
 ------------------------------------------------------------------------------------------------ */
 
 const sortBackwards = (arr) => {
-  // Solution code here...
+  helper(arr);
+  return arr;
+};
+const helper = (array) => {
+  array.sort((a, b) => {
+    return b - a;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -42,9 +48,20 @@ For example, ['Alphabet', 'Zebra', 'alphabet', 'carrot'] is correctly sorted.
 ------------------------------------------------------------------------------------------------ */
 
 const alphabetize = (arr) => {
-  // Solution code here...
+  helperArray(arr);
+  return arr;
 };
-
+const helperArray = (array) => {
+  array.sort((a, b) => {
+    if (a > b) {
+      return 1;
+    } else if (a < b) {
+      return -1;
+    } else {
+      return 0;
+    }
+  });
+};
 /* ------------------------------------------------------------------------------------------------
 CHALLENGE 4
 
@@ -52,7 +69,16 @@ Write a function named sortByLength that takes in an array of strings and return
 ------------------------------------------------------------------------------------------------ */
 
 const sortByLength = (arr) => {
-  // Solution code here...
+  helper3(arr);
+  return arr;
+};
+
+let helper3 = (array) => {
+  array.sort((a, b) => {
+    a = a.length;
+    b = b.length;
+    return a - b;
+  });
 };
 
 /* ------------------------------------------------------------------------------------------------
