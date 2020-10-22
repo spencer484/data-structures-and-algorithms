@@ -1,4 +1,5 @@
 
+const { SLList } = require('./linked-list');
 const obj = require('./linked-list');
 
 describe('Testing for the SSL', () => {
@@ -66,4 +67,32 @@ describe('Testing for the SSL', () => {
     expect(cheese.kthFromEnd(0)).toStrictEqual('a');
     expect(cheese.kthFromEnd(3)).toStrictEqual('d');
   });
+  test('Test to get a new list of the two list combined', () => {
+    let list1 = new obj.SSList();
+    list1.insert(10);
+    list1.insert(9);
+    list1.insert(8);
+    list1.insert(7);
+    list1.insert(6);
+    list1.insert(5);
+    list1.insert(4);
+    list1.insert(3);
+    list1.insert(2);
+    list1.insert(1);
+
+    let list2 = new obj.SSList();
+    list2.insert(10);
+    list2.insert(9);
+    list2.insert(8);
+    list2.insert(7);
+    list2.insert(6);
+    list2.insert(5);
+    list2.insert(4);
+    list2.insert(3);
+    list2.insert(2);
+    list2.insert(1);
+    // eslint-disable-next-line no-undef
+    expect(zipList(list1, list2).toStrictEqual(10, 9, 8, 7, 6, 5, 4, 3, 2, 1));
+  });
+
 });
