@@ -73,7 +73,8 @@ class Queue {
   }
 
   peek() {
-    if (!isEmpty()) {
+    if (!this.isEmpty()) {
+
       return this.front.value
     }
   }
