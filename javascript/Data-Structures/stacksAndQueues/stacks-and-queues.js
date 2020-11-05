@@ -75,7 +75,7 @@ class Queue {
   peek() {
     if (!this.isEmpty()) {
 
-      return this.front.value
+      return this.front.value;
     }
   }
 
@@ -90,3 +90,4 @@ class Queue {
 }
 
 module.exports = { Node: Node, Stack: Stack, Queue: Queue };
+
