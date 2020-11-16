@@ -1,5 +1,5 @@
 
-let oddArray = 0;
+let oddSum = 0;
 
 class BSNode {
   constructor(value) {
@@ -57,12 +57,12 @@ class BSTree {
       this.oddNode(runner.left);
 
       if (runner.value % !== 0) {
-        oddArray += runner.value;
+        oddSum += runner.value;
       }
 
       oddNode(runner.right);
     }
-    return oddArray;
+    return oddSum;
   }
 }
 
